@@ -9,9 +9,10 @@ const Header = () => {
             display: 'flex',
             flexGrow: 1,
             justifyContent: 'space-between',
-            border: '2px solid red',
+            // border: '2px solid red',
             padding: '15px'
         }}
+        className="shadow-lg fixed top-0 w-full z-10 h-20 bg-white"
     >
         <IconButton
             size="md"
@@ -54,7 +55,7 @@ const Header = () => {
                 variant="solid"
                 color="primary"
                 component="a"
-                href="/dashboard"
+                href="/login"
                 size="sm"
                 sx={{ alignSelf: 'center' }}
             >

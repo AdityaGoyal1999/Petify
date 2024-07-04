@@ -6,12 +6,7 @@ import { AboutUs } from '../components'
 
 const Home = () => {
   return (
-    <Box
-        sx={{
-            border: '2px solid blue'
-        }}
-        
-    >
+    <Box className="mt-40">
         <Grid 
             container spacing={2} 
             sx={{ 
@@ -20,7 +15,7 @@ const Home = () => {
         >
             <Grid xs={12} md={6} 
                 sx={{ 
-                    border: '2px solid red',
+                    // border: '2px solid red',
                     display: 'flex',
                     justifyContent: 'center' 
                 }}
@@ -36,11 +31,18 @@ const Home = () => {
                 </Box>
             </Grid>
 
-            <Grid xs={12} md={6} sx={{ border: '2px solid red' }}>
-                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', border: '2px solid blue'}}><img src={pawAnimation} width={150}></img></Box>
+            <Grid xs={12} md={6} sx={{ }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }} className="border border-red-500 flex flex-column">
+                    <Box><img src={pawAnimation} width={150}></img></Box>
+                    <Box>
+                        <Typography>This is great place to get pets</Typography>
+                    </Box>
+                </Box>
             </Grid>
         </Grid>
 
+        <AboutUs />
+        <AboutUs />
         <AboutUs />
     </Box>
   )

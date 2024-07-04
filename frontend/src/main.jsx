@@ -6,13 +6,17 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { Dashboard, Home } from './routes'
+import { Dashboard, Home, Login } from './routes'
 import { Header, Footer } from "./components"
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />
+  },
+  {
+    path: "/login",
+    element: <Login />
   },
   {
     path: "/dashboard",
