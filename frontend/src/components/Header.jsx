@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Stack, Button, IconButton } from "@mui/joy";
+import logo from "../assets/logo.png";
 
 const Header = () => {
   return (
@@ -14,14 +15,12 @@ const Header = () => {
     >
         <IconButton
             size="md"
-            variant="outlined"
-            color="neutral"
+            // color="neutral"
             sx={{
                 display: { xs: 'none', sm: 'inline-flex'},
-                borderRadius: '50%'
             }}
         >
-            <a href="/">Image</a>
+            <a href="/"><img src={logo} width={170}></img></a>
         </IconButton>
         <Stack
             direction="row"
