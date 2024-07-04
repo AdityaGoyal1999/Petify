@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Grid, Typography, Button } from "@mui/joy"
 import { Pets } from "@mui/icons-material"
 import pawAnimation from "../assets/paw-animation.gif"
-import { AboutUs } from '../components'
+import { AboutUs, Cards } from '../components'
 
 const Home = () => {
   return (
@@ -42,6 +42,7 @@ const Home = () => {
         </Grid>
 
         <AboutUs />
+        <Cards />
         <AboutUs />
         <AboutUs />
     </Box>
