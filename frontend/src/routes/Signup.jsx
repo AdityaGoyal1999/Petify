@@ -3,7 +3,7 @@ import { Box, Sheet, Typography, FormControl, FormLabel, Input, Button, Link } f
 import { CssVarsProvider } from '@mui/joy/styles';
 import { SmartButton } from '@mui/icons-material';
 
-const Login = () => {
+const Signup = () => {
   return (
     <CssVarsProvider>
       <Sheet 
@@ -24,7 +24,16 @@ const Login = () => {
         <Typography level="h4" component="h1">
           Welcome!
         </Typography>
-        <Typography level="body-sm">Sign in to continue.</Typography>
+        <Typography level="body-sm">Create account to continue.</Typography>
+        <FormControl>
+          <FormLabel>Name</FormLabel>
+          <Input
+            name="name"
+            type="text"
+            placeholder="Enter Name"
+          />
+        </FormControl>
+
         <FormControl>
           <FormLabel>Eamil</FormLabel>
           <Input
@@ -47,15 +56,15 @@ const Login = () => {
           sx={{mt: 1}}
           component="a"
           href="/dashboard"
-        >Login</Button>
+        >Sign up</Button>
         <Typography
           fontSize="sm"
-          endDecorator={<Link href="/signup">Sign up</Link>}
+          endDecorator={<Link href="/signup">Sign in</Link>}
           sx={{ alignSelf: 'center' }}
-        >Don't have an account?</Typography>
+        >Already have an account?</Typography>
       </Sheet>
     </CssVarsProvider>
   )
 }
 
-export default Login
+export default Signup
