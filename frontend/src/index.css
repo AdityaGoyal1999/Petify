@@ -34,8 +34,20 @@ body {
         @apply flex items-center justify-between;
     }
 
+    .bold-20 {
+        @apply text-[20px] font-[700];
+    }
+
+    .bold-32 {
+        @apply text-[32px] font-[700];
+    }
+
     .bold-52 {
         @apply text-[52px] font-[700] leading-[120%];
+    }
+
+    .bold-64 {
+        @apply text-[64px] font-[700] leading-[120%];
     }
 
     .bold-88 {
