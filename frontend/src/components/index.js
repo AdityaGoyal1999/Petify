@@ -5,6 +5,7 @@ import Cards from "./Cards"
 import Sidebar from "./Sidebar"
 import Hero from "./Hero";
 import CustomButton from "./CustomButton";
+import Guide from "./Guide.jsx"
 
 export {
     Header,
@@ -13,5 +14,6 @@ export {
     Cards,
     Sidebar,
     Hero, 
-    CustomButton
+    CustomButton,
+    Guide
 }

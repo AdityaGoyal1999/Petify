@@ -6,8 +6,8 @@ import { Box } from "@mui/joy"
 const Dashboard = () => {
   return (
     <CssVarsProvider>
-      <Box className="mt-20 border border-red-100" sx={{ display: 'flex' }}>
-        <Sidebar />
+      <Box className="mt-[96px] border border-red-100" sx={{ display: 'flex' }}>
+        {/* <Sidebar /> */}
         Dashboard
       </Box>
     </CssVarsProvider>
