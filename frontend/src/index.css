@@ -1,4 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter;
+}
+
+@layer utilities {
+
+    .max-container {
+        @apply mx-auto max-w-[1440px]
+    }
+
+    .padding-container {
+        @apply px-6 lg:px-20 3xl:px-0;
+    }
+
+    .flexCenter {
+        @apply flex items-center justify-center;
+    }
+
+    .flexBetween {
+        @apply flex items-center justify-between;
+    }
+
+    .bold-52 {
+        @apply text-[52px] font-[700] leading-[120%];
+    }
+
+    .bold-88 {
+        @apply text-[88px] font-[700] leading-[120%];
+    }
+
+    .regular-16{
+        @apply text-[16px] font-[400];
+    }
+}

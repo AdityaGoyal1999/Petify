@@ -2,12 +2,13 @@ import React from 'react'
 import { Box, Grid, Typography, Button } from "@mui/joy"
 import { Pets } from "@mui/icons-material"
 import pawAnimation from "../assets/paw-animation.gif"
-import { AboutUs, Cards } from '../components'
+import { AboutUs, Cards, Hero } from '../components'
 
 const Home = () => {
   return (
     <Box className="mt-40">
-        <Grid 
+        <Hero />
+        {/* <Grid 
             container spacing={2} 
             sx={{ 
                 flexGrow: 1,
@@ -39,7 +40,7 @@ const Home = () => {
                     </Box>
                 </Box>
             </Grid>
-        </Grid>
+        </Grid> */}
 
         <AboutUs />
         <Cards />
