@@ -38,6 +38,10 @@ body {
         @apply flex items-center justify-end
     }
 
+    .bold-18{
+        @apply text-[18px] font-[700];
+    }
+
     .bold-20 {
         @apply text-[20px] font-[700];
     }
@@ -60,5 +64,9 @@ body {
 
     .regular-16{
         @apply text-[16px] font-[400];
+    }
+
+    .medium-14 {
+        @apply text-[14px] font-[600];
     }
 }

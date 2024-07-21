@@ -6,9 +6,11 @@ import { Box } from "@mui/joy"
 const Dashboard = () => {
   return (
     <CssVarsProvider>
-      <Box className="mt-[96px] border border-red-100" sx={{ display: 'flex' }}>
-        {/* <Sidebar /> */}
-        Dashboard
+      <Box>
+        <Box className="mt-[96px] flex flex-grow border border-red-100">
+          <Sidebar />
+          Dashboard
+        </Box>
       </Box>
     </CssVarsProvider>
   )

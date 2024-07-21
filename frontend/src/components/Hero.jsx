@@ -33,7 +33,6 @@ const Hero = () => {
             <Box className="w-1/2 z-20 bg-blue-100 rounded-3xl xl:w-full h-full">
                 <img 
                     src={animatedDog}
-                    className=""
                 ></img>
             </Box>
         </Box>

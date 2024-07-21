@@ -5,10 +5,10 @@ import { BrightnessAutoRounded, DashboardRounded, HomeRounded, LogoutRounded, Pe
 const Sidebar = () => {
   return (
     <Sheet
-        className="Sidebar mt-10"
+        className="Sidebar"
         sx={{
             position: { xs: 'fixed', md: 'sticky'},
-            zIndex: 10000,
+            // zIndex: 10000,
             // height: '90vh',
             width: '250px',
             top: 0,
@@ -26,7 +26,7 @@ const Sidebar = () => {
                 zIndex: 9998,
                 top: 0,
                 left: 0,
-                width: '100vw',
+                // width: '100vw',
                 height: '100vh',
                 
             }}

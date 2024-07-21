@@ -1,17 +1,40 @@
-// import './App.css'
-// import Button from "@mui/joy/Button"
-// import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import './App.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import './index.css'
 
-// import { Home } from './routes'
+  import { Dashboard, Home, Login, Signup } from './routes'
+  import { Header, Footer } from "./components"
 
-// function App() {
+const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />
+    },
+    {
+      path: "/login",
+      element: <Login />
+    },
+    {
+      path: "/signup",
+      element: <Signup />
+    },
+    {
+      path: "/dashboard",
+      element: <Dashboard />
+    }
+  ])
 
-//   return (
-//     <div>
-//       Hello world!
-//       <Button variant="solid">Hello World!</Button>
-//     </div>
-//   )
-// }
+function App() {
 
-// export default App
+  return (
+    <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-grow">
+            <RouterProvider router={router} />
+        </main>
+        <Footer />
+    </div>
+  )
+}
+
+export default App

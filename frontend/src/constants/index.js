@@ -18,3 +18,11 @@ export const FEATURES = [
         description: 'Learn about the Frequently Asked Questions when it comes to pet adoption or any other question you have on this matter.'
     }
 ]
+
+export const FOOTER_CONTACT_INFO = {
+    title: 'Contact Us',
+    links: [
+      { label: 'Admin Officer', value: '123-123-1234' },
+      { label: 'Email Officer', value: 'johndoe@gmail.com' },
+    ],
+  };
