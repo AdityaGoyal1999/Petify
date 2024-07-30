@@ -4,7 +4,7 @@ import { FOOTER_CONTACT_INFO } from '../constants'
 
 const Footer = () => {
   return (
-    <footer className="mx-auto w-full bg-blue-100 bottom-0">
+    <footer className="w-full bg-blue-100 bottom-0">
       <div className="pt-10 pb-5 max-container padding-container w-full flex-col gap-14">
         <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row mb-10">
           <a>

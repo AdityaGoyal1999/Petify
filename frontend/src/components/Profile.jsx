@@ -51,7 +51,7 @@ const Profile = () => {
             </IconButton>
           </Stack>
 
-          <Stack spacing={2} sx={{flexGrow: 1}}>
+          <Stack spacing={2} sx={{flexGrow: 1, minWidth: 0}}>
               <Stack spacing={1}>
                 <FormLabel>Name</FormLabel>
                 <FormControl sx={{ display: 'flex', gap: 2}}>
@@ -60,12 +60,12 @@ const Profile = () => {
                 </FormControl>
               </Stack>
 
-              <Stack direction="row" spacing={2}>
-                <FormControl sx={{flexGrow: 1}}>
+              <Stack direction="row" spacing={2} sx={{ flexGrow: 1, minWidth:0 }}>
+                <FormControl sx={{flexGrow: 1, minWidth: 0}}>
                   <FormLabel>Role</FormLabel>
                   <Input size="sm" defaultValue="UI Developer" />
                 </FormControl>
-                <FormControl sx={{ flexGrow: 1}}>
+                <FormControl sx={{ flexGrow: 1, minWidth: 0}}>
                   <FormLabel>Email</FormLabel>
                   <Input 
                     size="sm"
