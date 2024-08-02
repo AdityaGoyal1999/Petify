@@ -7,6 +7,8 @@ import Hero from "./Hero";
 import CustomButton from "./CustomButton";
 import Guide from "./Guide.jsx"
 import Profile from "./Profile.jsx"
+import Search from "./Search.jsx"
+import Messages from "./Messages.jsx"
 
 export {
     Header,
@@ -17,5 +19,7 @@ export {
     Hero, 
     CustomButton,
     Guide,
-    Profile
+    Profile,
+    Messages,
+    Search
 }

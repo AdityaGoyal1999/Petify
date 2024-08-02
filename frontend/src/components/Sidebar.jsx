@@ -1,6 +1,7 @@
 import React from 'react'
-import { Sheet, Box, IconButton, Typography, Input, List, ListItem, ListItemButton, ListItemContent, Avatar, Link } from "@mui/joy";
-import { BrightnessAutoRounded, DashboardRounded, HomeRounded, LogoutRounded, PersonRounded, SearchRounded, ShoppingCartRounded } from '@mui/icons-material';
+import { Sheet, Box, IconButton, Typography, Input, List, ListItem, ListItemButton, ListItemContent, Avatar } from "@mui/joy";
+import { BrightnessAutoRounded, DashboardRounded, HomeRounded, LogoutRounded, PersonRounded, MessageRounded, SearchRounded } from '@mui/icons-material';
+import { Link } from "react-router-dom"
 
 const Sidebar = () => {
   return (
@@ -57,25 +58,25 @@ const Sidebar = () => {
                 </ListItem>
 
                 <ListItem>
-                    <ListItemButton>
-                        <DashboardRounded />
+                    <ListItemButton component={Link} to="/dashboard/search">
+                        <SearchRounded />
                         <ListItemContent>
-                            <Typography level="title-sm">Dashboard</Typography>
+                            <Typography level="title-sm">Search</Typography>
                         </ListItemContent>
                     </ListItemButton>
                 </ListItem>
                 
                 <ListItem>
-                    <ListItemButton>
-                        <ShoppingCartRounded />
+                    <ListItemButton component={Link} to="/dashboard/messages">
+                        <MessageRounded />
                         <ListItemContent>
-                            <Typography level="title-sm">Orders</Typography>
+                            <Typography level="title-sm">Messages</Typography>
                         </ListItemContent>
                     </ListItemButton>
                 </ListItem>
 
                 <ListItem>
-                    <ListItemButton>
+                    <ListItemButton component={ Link } to="/dashboard/profile">
                         <PersonRounded />
                         <ListItemContent>
                             <Typography level="title-sm">Profile</Typography>
