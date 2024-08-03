@@ -2,7 +2,20 @@ import React from 'react'
 import { Box, Sheet, Typography, FormControl, FormLabel, Input, Button, Link } from '@mui/joy'
 import { CssVarsProvider } from '@mui/joy/styles';
 import { SmartButton } from '@mui/icons-material';
-import { Header, Footer } from "../components"
+import { Header, Footer } from "../components";
+import axios from "axios";
+
+const handleLogin = () => {
+  console.log("Something")
+
+  axios.get('http://localhost:3000/')
+    .then((response) => {
+      console.log(response.data.message);
+    })
+    .catch((error) => {
+      console.error(error);
+    })
+}
 
 const Login = () => {
   return (
@@ -67,6 +80,12 @@ const Login = () => {
               component="a"
               href="/dashboard"
             >Login</Button>
+            <Button 
+              sx={{mt: 1}}
+              // component="a" 
+              // href="/dashboard"
+              onClick={handleLogin}
+            >Test Button</Button>
             <Typography
               fontSize="sm"
               endDecorator={<Link href="/signup">Sign up</Link>}

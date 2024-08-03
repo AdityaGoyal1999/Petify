@@ -10,7 +10,7 @@ const Sidebar = () => {
         sx={{
             position: { xs: 'fixed', md: 'sticky'},
             height: '100vh',
-            width: '250px',
+            width: '280px',
             top: 0,
             p: 2,
             display: 'flex',
@@ -95,7 +95,13 @@ const Sidebar = () => {
                 <Typography level="title-sm">Aditya Goyal</Typography>
                 <Typography level="body-xs">adityagoyaldoon@gmail.com</Typography>
             </Box>
-            <IconButton size="sm" variant="plain" color="neutral">
+            <IconButton 
+                size="sm" 
+                variant="plain" 
+                color="neutral"
+                component={Link}
+                to="/"
+            >
                 <LogoutRounded />
             </IconButton>
         </Box>
