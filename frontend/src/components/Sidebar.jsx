@@ -9,7 +9,6 @@ const Sidebar = () => {
         className="Sidebar"
         sx={{
             position: { xs: 'fixed', md: 'sticky'},
-            // zIndex: 10000,
             height: '100vh',
             width: '250px',
             top: 0,
@@ -17,7 +16,7 @@ const Sidebar = () => {
             display: 'flex',
             flexDirection: 'column',
             gap: 2,
-            borderRadius: '1px solid',
+            borderRight: '1px solid',
             borderColor: 'divider'
         }}
     >
