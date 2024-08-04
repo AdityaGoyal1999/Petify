@@ -1,23 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Sheet, Typography, FormControl, FormLabel, Input, Button, Link } from '@mui/joy'
 import { CssVarsProvider } from '@mui/joy/styles';
 import { SmartButton } from '@mui/icons-material';
 import { Header, Footer } from "../components";
+import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 
-const handleLogin = () => {
-  console.log("Something")
-
-  axios.get('http://localhost:3000/')
-    .then((response) => {
-      console.log(response.data.message);
-    })
-    .catch((error) => {
-      console.error(error);
-    })
-}
-
 const Login = () => {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    
+    axios.post('http://localhost:3000/users/login', {
+      email: email,
+      password: password
+    })
+      .then((response) => {
+        console.log(response.data.message);
+        if (response.data.message === "Successful Login"){
+          navigate("/dashboard")
+        }
+        else{
+          // DOM manipulation and error display
+          console.log("Wasn't able to login")
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+  }
+
   return (
     <CssVarsProvider>
       <Box
@@ -58,11 +73,12 @@ const Login = () => {
             </Typography>
             <Typography level="body-sm">Sign in to continue.</Typography>
             <FormControl>
-              <FormLabel>Eamil</FormLabel>
+              <FormLabel>Email</FormLabel>
               <Input
                 name="email"
                 type="email"
                 placeholder="Enter Email"
+                onChange={(event) => setEmail(event.target.value)}
               />
             </FormControl>
 
@@ -72,6 +88,7 @@ const Login = () => {
                 name="password"
                 type="password"
                 placeholder="Enter Password"
+                onChange={(event) => setPassword(event.target.value)}
               />
             </FormControl>
 
