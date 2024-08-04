@@ -21,6 +21,7 @@ const Login = () => {
       .then((response) => {
         console.log(response.data.message);
         if (response.data.message === "Successful Login"){
+          localStorage.setItem('token', response.data.token)
           navigate("/dashboard")
         }
         else{

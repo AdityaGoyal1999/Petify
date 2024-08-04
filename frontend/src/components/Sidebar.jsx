@@ -99,6 +99,7 @@ const Sidebar = () => {
                 size="sm" 
                 variant="plain" 
                 color="neutral"
+                onClick={() => localStorage.removeItem('token')}
                 component={Link}
                 to="/"
             >
